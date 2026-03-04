@@ -1,0 +1,54 @@
+{
+    "account_id": "bens_electric_solutions_12345",
+    "after_hours_flow_summary": "If a call comes in outside of standard business hours (e.g., evenings, weekends, holidays), Clara will answer. For non-emergency service requests, Clara will gather all necessary customer and job details and offer to schedule an appointment for the next available business day after 8 AM. For defined emergencies (sparks from circuit boards, no electricity, or critical business outages like gas pumps down for specific clients), Clara will immediately transfer the call to Ben or the designated on-call technician.",
+    "business_hours": {
+        "days": null,
+        "end": null,
+        "start": "8am",
+        "timezone": null
+    },
+    "call_transfer_rules": {
+        "failure_message": null,
+        "retries": null,
+        "timeouts": null
+    },
+    "company_name": "Ben's Electric Solutions",
+    "emergency_definition": [
+        "Sparks coming out of certain circuit boards",
+        "No electricity",
+        "Gas pumps down (for specific property manager clients)"
+    ],
+    "emergency_routing_rules": {
+        "fallback": "If the on-call person is unavailable for general public emergency calls, the caller will be advised to seek assistance elsewhere, or the call will be noted as unhandled in the dashboard.",
+        "order": "Clara will screen calls. If an emergency is identified, the call will be immediately routed to Ben or the designated on-call person.",
+        "who_to_call": "Ben (for specific property managers/general contractors he works with); otherwise, the designated on-call person."
+    },
+    "integration_constraints": "Current integrations with Service Titan, Housecall Pro, Service Fusion, Zen platform. Jobber integration is in process and coming soon. Clara does not have its own calendar/scheduler and aims to integrate with existing CRM/scheduling systems.",
+    "non_emergency_routing_rules": "Clara will answer calls, gather customer (name, address, phone) and job details, qualify the job type, suggest appointment times (e.g., after 8 AM), create a summary, send notifications to Ben (email/text), and add the details to a dashboard. Spam and sales calls will be filtered out. Calls from preferred contractors or personal contacts (e.g., Ben's wife) will be routed directly to Ben without screening. Calls asking to speak to Ben directly will be screened for purpose before transfer.",
+    "notes": "Ben is a sole proprietor planning to incorporate and grow. He currently manages all office tasks but is bringing on an operations manager/estimator, Greg. The company has 3 journeymen, 1 apprentice, and uses 2 subcontractors, operating 2 (soon 3) company vans, aiming for 5. Ben uses Jobber for CRM and QuickBooks for accounting (invoicing through Jobber). He had a negative experience with a live virtual assistant previously. Clara's core purpose is to handle incoming calls, filter out spam, qualify leads, and provide detailed call summaries. Clara can suggest appointment times but will not confirm final bookings for dynamic schedules, leaving that to the team. Clara can upsell club memberships (priority scheduling, discounts, annual safety checks). The starting plan is $249/month for 500 minutes, with a 3-month trial period upfront payment. Prices will be locked for 12 months for initial subscribers.",
+    "office_address": "17119 Sundown Road, S.E. Calgary, Alberta. T 2X3D4",
+    "office_hours_flow_summary": "During standard business hours (starting 8 AM), Clara will answer incoming calls. She will greet the customer as 'Clara from Ben's Electric Solutions,' identify the customer's needs (outlet replacement, EV charger, hot tub electrical, etc.), gather essential information (name, address, phone number), and provide relevant technical answers. Clara will qualify the job, suggest available appointment times for an assessment or quote (after 8 AM), and offer club membership benefits. All call details, including intent, customer information, and proposed job date/time, will be summarized and sent to Ben via email and text, and logged in the dashboard. Clara will filter out irrelevant sales/spam calls.",
+    "questions_or_unknowns": [
+        "Specific days of the week for business hours",
+        "End time for business hours",
+        "Timezone for business hours",
+        "Details on call transfer timeouts, retries, and failure messages",
+        "Specific fallback procedure for general public emergency calls if Ben is unavailable (beyond deferring elsewhere)"
+    ],
+    "services_supported": [
+        "Outlet replacements",
+        "Aluminum wiring mitigation",
+        "Fixture replacement",
+        "EV chargers installation and wiring",
+        "Hot tub electrical hookups (excluding full installation)",
+        "Panel changes",
+        "General electrical service maintenance",
+        "Small jobs and odd jobs",
+        "Electrical renovations",
+        "Electrical troubleshooting",
+        "New custom home electrical projects",
+        "Tenant infill and improvement electrical work",
+        "Generator connection/interlock systems",
+        "LED lighting upgrades"
+    ]
+}
