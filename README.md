@@ -19,3 +19,7 @@ This is a zero-cost automation pipeline built for Clara AI. It converts unstruct
 Run the main script from the root directory:
 ```bash
 python scripts/pipeline.py
+
+## Known Limitations & Future Improvements
+- **Audio Processing:** Currently expects text transcripts to maintain the "zero-cost" constraint. In production, I would integrate a Whisper endpoint (or Deepgram) for Speech-to-Text before the LLM extraction phase.
+- **Task Tracking:** To keep this entirely local and reproducible for the grading team, I omitted the Asana API integration, but it could easily be added as a standard webhook POST request within the Python orchestrator.
